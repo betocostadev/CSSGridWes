@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/mycss.css">
+  <title>Sizing Tracks in CSS Grid!</title>
+</head>
+
+<body>
+
+  <h1>Sizing Tracks in CSS Grid!</h1>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+  </div>
+
+  <p class="mynotes">É possível utilizar porcentagens no sistema GRID sem problemas, porém, não é recomendado
+    já que será necessário fazer alguns cálculos caso você precise utilizar o grip-gap, por exemplo.
+  </p>
+
+  <p class="mynotes">Devido a esse "problema" no GRID é recomendado utilizar fr, ou Fraction Units, pois com o fr o sistema já
+     faz o cálculo automaticamente.</p>
+
+  <p class="mynotes">Veja a diferença: O GRID superior usa fr para as colunas, já o GRID inferior usa porcentagens.</p>
+
+  <p class="mynotes">Também é possível fazer com que os itens do GRID ocupem mais espaço utilizando fr.
+    Se quisermos que, por exemplo, o GRID tenha 4 colunas e as duas do meio sejam maiores, podemos utilizar o
+    código da seguinte maneira:</p>
+  <span class="mynotes">grid-template-columns: 1fr 2fr 2fr 1fr</span>
+  <p class="mynotes">Dessa forma, as colunas da direita e esquerda vão ocupar 1fr, enquanto as colunas centrais 
+    vão ocupar 2fr cada.</p>
+
+  <div class="containertest">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="containertestdois">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3 TRÍCEPS</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+  </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .containertest {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .containertestdois {
+      display: grid;
+      height: 200px;
+      grid-gap: 20px;
+      grid-template-columns: auto 1fr;
+    }
+  </style>
+</body>
+
+</html>

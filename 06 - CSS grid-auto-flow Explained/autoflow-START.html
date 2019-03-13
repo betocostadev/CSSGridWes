@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/mycss.css">
+  <title>CSS grid-auto-flow Explained!</title>
+</head>
+
+<body>
+
+  <h1>CSS grid-auto-flow Explained!</h1>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <p class="mynotes">O sistema de Grid automaticamente adiciona novas linhas quando precisa para exibir os itens inclusos no código.
+      Caso exista a necessidade de fazer com que o GRID crie novas colunas ao invés de linhas, podemos utilizar um
+      comando para isso.</p>
+
+  <p class="mynotes">Por padrão o sistema grid usa grid-auto-flow: row; Podemos mudar para column para que funcione adicionando
+    novas colunas ao invés de linhas.
+  </p>
+
+  <p class="mynotes">Este não é um comportamento comum, porém pode ser utilizado caso, por exemplo, seja necessário criar uma galeria
+    com scroll horizontal.
+  </p>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 400px 1fr;
+      grid-auto-flow: column;
+    }
+  </style>
+</body>
+
+</html>

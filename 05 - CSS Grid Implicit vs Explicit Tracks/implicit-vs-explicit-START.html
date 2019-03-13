@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/mycss.css">
+  <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
+</head>
+
+<body>
+
+  <h1>CSS Grid Implicit vs Explicit Grid Tracks</h1>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+  
+  <p class="mynotes">Linhas explícitas são criadas quando definimos tanto linhas quanto as colunas no código.</p>
+  <p class="mynotes">Por exemplo:</p>
+     <span class="mynotes">grid-template-columns: 200px 300px;</span><br>
+     <span class="mynotes">grid-template-rows: 150px, 150px;</span>
+  <p class="mynotes">O grid será criado com 2 colunas, uma de 200 px e outra de 300px e terá duas linhas de 150px cara.
+     Caso seja necessário criar uma terceira linha, então o grid irá criar uma linha implícita.</p>
+  <p class="mynotes">As colunas implícitas podem ter seu tamanho alterado usando o código "grid-auto-rows".</p>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 200px 400px;
+      grid-template-rows: 50px 100px;
+      grid-auto-rows: 150px; /* Vai controlar as linhas implicitas */
+    }
+  </style>
+</body>
+
+</html>

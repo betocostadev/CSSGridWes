@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Flexbox vs CSS Grid: Flex on Item!</title>
+</head>
+
+<body>
+  <!-- The Longer Item in the middle -->
+  <div class="controls">
+    <button>⏯️</button>
+    <button>🐢</button>
+    <button>🐰</button>
+    <div class="scrubber"></div>
+    <button>💬</button>
+    <button>🔽</button>
+  </div>
+
+  <style>
+
+    /* Fazendo funcionar como Flexbox
+    .controls {
+      margin: 200px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .scrubber {
+      background: #BADA55;
+      height: 15px;
+      min-width: 100px;
+      border-radius: 10px;
+      flex: 1; /* Faz com que o scrubber pegue todo o espaço possível, como 1fr no grid.
+    } */
+
+    /* Fazendo funcionar como GRID */
+    .controls {
+      margin: 200px 0;
+      display: grid;
+      grid-template-columns: auto auto auto 1fr auto auto;
+      align-items: center;
+    }
+
+    .scrubber {
+      background: #BADA55;
+      height: 15px;
+      min-width: 100px;
+      border-radius: 10px;
+       /* Faz com que o scrubber pegue todo o espaço possível, como 1fr no grid. */
+    }
+
+
+  </style>
+
+</body>
+
+</html>
